@@ -1,0 +1,34 @@
+{
+  "version": "0",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.s3",
+  "account": "111122223333",
+  "region": "eu-west-2",
+  "detail": {
+    "eventVersion": "1.08",
+    "eventTime": "2026-11-25T10:00:00Z",
+    "eventSource": "s3.amazonaws.com",
+    "eventName": "PutBucketPolicy",
+    "awsRegion": "eu-west-2",
+    "recipientAccountId": "111122223333",
+    "userIdentity": {
+      "type": "IAMUser",
+      "arn": "arn:aws:iam::111122223333:user/dev",
+      "principalId": "AIDAEXAMPLE"
+    },
+    "requestParameters": {
+      "bucketName": "customer-data",
+      "bucketPolicy": {
+        "Version": "2012-10-17",
+        "Statement": [
+          {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::customer-data/*"
+          }
+        ]
+      }
+    }
+  }
+}
