@@ -1,0 +1,40 @@
+{
+  "version": "0",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.ec2",
+  "account": "111122223333",
+  "region": "eu-west-2",
+  "detail": {
+    "eventVersion": "1.08",
+    "eventTime": "2026-11-25T10:00:00Z",
+    "eventSource": "ec2.amazonaws.com",
+    "eventName": "AuthorizeSecurityGroupIngress",
+    "awsRegion": "eu-west-2",
+    "recipientAccountId": "111122223333",
+    "userIdentity": {
+      "type": "IAMUser",
+      "arn": "arn:aws:iam::111122223333:user/dev",
+      "principalId": "AIDAEXAMPLE"
+    },
+    "requestParameters": {
+      "groupId": "sg-0123456789abcdef0",
+      "ipPermissions": {
+        "items": [
+          {
+            "ipProtocol": "tcp",
+            "fromPort": 22,
+            "toPort": 22,
+            "ipRanges": {
+              "items": [
+                {
+                  "cidrIp": "0.0.0.0/0"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "errorCode": "UnauthorizedOperation"
+  }
+}

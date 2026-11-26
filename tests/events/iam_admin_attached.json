@@ -1,0 +1,24 @@
+{
+  "version": "0",
+  "detail-type": "AWS API Call via CloudTrail",
+  "source": "aws.iam",
+  "account": "111122223333",
+  "region": "eu-west-2",
+  "detail": {
+    "eventVersion": "1.08",
+    "eventTime": "2026-11-25T10:00:00Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "AttachUserPolicy",
+    "awsRegion": "eu-west-2",
+    "recipientAccountId": "111122223333",
+    "userIdentity": {
+      "type": "IAMUser",
+      "arn": "arn:aws:iam::111122223333:user/dev",
+      "principalId": "AIDAEXAMPLE"
+    },
+    "requestParameters": {
+      "userName": "intern",
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+    }
+  }
+}
